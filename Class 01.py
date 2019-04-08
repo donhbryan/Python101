@@ -4,7 +4,7 @@ print ("Class 01")
 # Hello World
 print("Hello World")
 
-# types 
+# types  
 print(type("Hello World"))
 print(type(11.))
 print(type(11))
