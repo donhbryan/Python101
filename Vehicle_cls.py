@@ -34,14 +34,16 @@ class Car(Vehicle):
         self.modelyear = modelyear
         self.doors = doors
         self.bodystyle = bodystyle
-        pass
+        # pass
 
 
 def main():
     etype = Car('Jaguar', 'XKE 2+2', 1968, 2, 'Coupe')
+    etypeconv = Car('Jaguar', 'XKE', 1968, 2, 'Convertible')
     # print(type(etype))
     # print(etype)
     etype.SetEngine("Gas", 4.2, 256, "RWD")
+    etypeconv.SetEngine("Gas", 308, 256, "RWD")
     temp = vars(etype)
     for item in temp:
         print(f"Item: {item} = {temp[item]}")
@@ -50,6 +52,8 @@ def main():
     # print(etype.__dict__)
     # print(dir(etype))
     pprint(vars(etype))
+    pprint(vars(etypeconv))
+
     # pprint(globals())
     # pprint(locals())
 
