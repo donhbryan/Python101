@@ -1,10 +1,10 @@
 # Class 01.py
-print ("Class 01")
+print("Class 01")
 
 # Hello World
 print("Hello World")
 
-# types  
+# types
 print(type("Hello World"))
 print(type(11.))
 print(type(11))
@@ -14,7 +14,7 @@ print(str(int(bool(False)))+" is false")
 # Values and expressions
 print((bool(True)))
 print(5*32)
-var1=22
-var2=7
+var1 = 22
+var2 = 7
 pi = (var1/float(var2))
-print("pi = "+ str(pi))
+print("pi = " + str(pi))
