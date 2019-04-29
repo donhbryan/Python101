@@ -1,4 +1,0 @@
-some data to be written to the file
-bytes in the string = 36
-A n 
-bytes in the string = 11
