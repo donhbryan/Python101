@@ -1,11 +1,15 @@
 # Walk the directory
 import os
-path = "/Windows10Upgrade"
+path = "l:/Downloads/Python"
 i = 0
 for dirpath, dirnames, filenames in os.walk(path,  topdown=False):
     print(dirpath, dirnames, filenames)
-    i += 1
-print(i)
+for file in filenames:
+	if ".mp4" in file:
+		
+	print (file)
+i += 1
+print(filenames)
 
 import os
 for dirpath, dirs, files in os.walk("\\"):

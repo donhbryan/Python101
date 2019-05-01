@@ -143,3 +143,7 @@ print(isinstance(mgr_2, Employee))
 print(isinstance(mgr_2, Developer))
 print(issubclass(Manager, (Employee, Developer)))
 print(issubclass(Manager, Manager))
+
+
+# name = input('Who are you? ')
+# print("Hello, ",name)
