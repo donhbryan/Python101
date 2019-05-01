@@ -118,7 +118,6 @@ def main():
     print(Employee.is_workday(mydate))
     print(mydate)
 
-
 # main()
 dev_1 = Developer('John', 'Brown', 200, 'COBOL')
 dev_2 = Developer('Mary', 'Grey', 200, 'Fortan')
