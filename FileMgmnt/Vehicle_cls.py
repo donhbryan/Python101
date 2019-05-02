@@ -1,4 +1,5 @@
-
+import unicodedata
+import emoji
 from pprint import pprint
 
 
@@ -29,11 +30,14 @@ class Vehicle:
 
 
 class Car(Vehicle):
-    def __init__(self, mfg, name, modelyear, doors, bodystyle):
+    Vehicle_Type = {"car": emoji.emojize(':red_car:'), "truck": "🚙", "taxi": "🚕"}
+
+    def __init__(self, mfg, name, modelyear, doors, bodystyle, vehicletype=Vehicle_Type["car"]):
         super().__init__(mfg, name)
         self.modelyear = modelyear
         self.doors = doors
         self.bodystyle = bodystyle
+        self.type = vehicletype.encode('utf-32')
         # pass
 
 
@@ -45,17 +49,28 @@ def main():
     etype.SetEngine("Gas", 4.2, 256, "RWD")
     etypeconv.SetEngine("Gas", 308, 256, "RWD")
     temp = vars(etype)
-    for item in temp:
-        print(f"Item: {item} = {temp[item]}")
+    # for item in temp:
+    #     print(f"Item: {item} = {temp[item]}")
     # print("%s %s /n" for item in temp.items())
     # pprint(' -- '.join("%s: %s" % item for item in temp.items()))
     # print(etype.__dict__)
     # print(dir(etype))
-    pprint(vars(etype))
-    pprint(vars(etypeconv))
+    
+    # pprint(vars(etype))
+    # pprint(vars(etypeconv))
 
     # pprint(globals())
     # pprint(locals())
-
+    print(etype.type.decode('unicode-escape'))
 
 main()
+'''
+s = u'\u0627'
+# import unicodedata
+s = u"\U0001F697"
+x = s.encode('utf-32')  
+print(x.decode('unicode-escape'))
+
+print(u"\U0001F697".encode('utf-8'))
+print("\N{SNAKE}")
+'''
