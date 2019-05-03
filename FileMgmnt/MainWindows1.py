@@ -54,7 +54,7 @@ class Ui_MainWindow(object):
         self.btnQuit.setText(_translate("MainWindow", "Quit"))
         self.label.setText(_translate("MainWindow", "Name"))
         self.btnBrowse.setText(_translate("MainWindow", "Browse"))
-
+        self.btnQuit.clicked.connect(QtCore.QCoreApplication.instance().quit)
 '''
 if __name__ == "__main__":
     import sys

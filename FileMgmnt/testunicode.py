@@ -10,6 +10,7 @@ import emoji
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -40,6 +41,7 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        # self.pushButton.clicked.connect(self.retranslateUi(MainWindow))
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -47,9 +49,13 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
+        self.pushButton.setText(_translate("MainWindow", "Refresh"))
+        # self.graphicsView.set
         self.marbles.setText(_translate("MainWindow", emoji.emojize(
-            ':automobile:')))
+            ':automobile:') + emoji.emojize(":motorcycle:") +
+            emoji.emojize(":skateboard:") + chr(128013) + "✔" + chr(0x0001f40d)
+            + chr(13231)
+            ))
 
 
 if __name__ == "__main__":
@@ -60,4 +66,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-

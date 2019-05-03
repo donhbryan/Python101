@@ -31,8 +31,7 @@ class Vehicle:
 
 # 🏍🏎🛥🛶🚲🚒🚗
 class Car(Vehicle):
-    Vehicle_Type = {"car": emoji.emojize(
-        "🚗"), "truck": "🚙", "taxi": "🚕"}
+    Vehicle_Type = {"car": "🚗", "truck": "🚙", "taxi": "🚕"}
     Vehicle_Type = {"car": emoji.emojize(
         ':automobile:'), "truck":  emoji.emojize(":truck:"), "lorry":  emoji.emojize(":articulated_lorry:"), "bike":  emoji.emojize(":motorcycle:")}
 
