@@ -1,24 +1,24 @@
 import os
 import sys
 
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog
-from PyQt5.uic import loadUi
+from PyQt5 import QtCore, QtGui, QtWidgets
+# from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog
+# from PyQt5.uic import loadUi
 
 import MainWindows1
 
-# "C:\Users\db\Anaconda3\Library\bin\pyuic5.bat" - x MainWindows1.ui - o "C:\Users\db\Python-Source\File Management\MainWindows1.py"
+# "C:\Users\db\Anaconda3\Library\bin\pyuic5.bat" -x MainWindows1.ui -o "C:\Users\db\Python-Source\File Management\MainWindows1.py"
 
 
 class Life2Coding(QtWidgets.QMainWindow, MainWindows1.Ui_MainWindow):
     '''
-    Test dialog usint PyQt5 Designer.
+    Test dialog using PyQt5 Designer.
     '''
 
-    def __init__(self, parent=None):
-        super(Life2Coding, self).__init__(parent)
+    def __init__(self,  *args, **kwargs):
+        super(Life2Coding, self).__init__(*args, **kwargs)
         self.setupUi(self)
-
+# '''
         self.btnOk.clicked.connect(self.ok_pushButton_clicked)
         self.btnQuit.clicked.connect(self.quit_pushButton_clicked)
         self.btnBrowse.clicked.connect(self.browse_folder)
@@ -42,7 +42,7 @@ class Life2Coding(QtWidgets.QMainWindow, MainWindows1.Ui_MainWindow):
             for file_name in os.listdir(directory):
                 # add file to the listWidget
                 self.listWidget.addItem(file_name)
-
+# '''
 
 def main():
     app = QtWidgets.QApplication(sys.argv)

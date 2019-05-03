@@ -29,15 +29,19 @@ class Vehicle:
             self.drive = None
 
 
+# 🏍🏎🛥🛶🚲🚒🚗
 class Car(Vehicle):
-    Vehicle_Type = {"car": emoji.emojize(':red_car:'), "truck": "🚙", "taxi": "🚕"}
+    Vehicle_Type = {"car": emoji.emojize(
+        "🚗"), "truck": "🚙", "taxi": "🚕"}
+    Vehicle_Type = {"car": emoji.emojize(
+        ':automobile:'), "truck":  emoji.emojize(":truck:"), "lorry":  emoji.emojize(":articulated_lorry:"), "bike":  emoji.emojize(":motorcycle:")}
 
     def __init__(self, mfg, name, modelyear, doors, bodystyle, vehicletype=Vehicle_Type["car"]):
         super().__init__(mfg, name)
         self.modelyear = modelyear
         self.doors = doors
         self.bodystyle = bodystyle
-        self.type = vehicletype.encode('utf-32')
+        self.type = vehicletype
         # pass
 
 
@@ -55,13 +59,14 @@ def main():
     # pprint(' -- '.join("%s: %s" % item for item in temp.items()))
     # print(etype.__dict__)
     # print(dir(etype))
-    
+
     # pprint(vars(etype))
     # pprint(vars(etypeconv))
 
     # pprint(globals())
     # pprint(locals())
-    print(etype.type.decode('unicode-escape'))
+    print(etype.type)
+
 
 main()
 '''
@@ -74,3 +79,4 @@ print(x.decode('unicode-escape'))
 print(u"\U0001F697".encode('utf-8'))
 print("\N{SNAKE}")
 '''
+print(emoji.emojize("Python is fun :thumbsup:", use_aliases=True))

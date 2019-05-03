@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Name"))
         self.btnBrowse.setText(_translate("MainWindow", "Browse"))
 
-
+'''
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -64,4 +64,4 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
+'''
