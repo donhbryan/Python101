@@ -12,7 +12,6 @@ CSV_FILE = 'd:\\temp\\checksums_archive.csv'
 
 
 def file_hash_hex(file_path, hash_func):
-    startTime = datetime.now()
 
     digest = hash_func()
     with open(file_path, 'rb') as file_obj:
@@ -21,8 +20,6 @@ def file_hash_hex(file_path, hash_func):
             if not buf:
                 break
             digest.update(buf)
-    print(
-        f'Time elpased (hh:mm:ss.ms) {datetime.now()-startTime}  for  {file_path}')
     return digest.hexdigest()
 
     # return hash_func(f.read()).hexdigest()
@@ -49,15 +46,18 @@ def FindFiles(search_dir, file_pattern):
 
 def main():
     """ Main """
+    startTime = datetime.now()
 
     files_found = []
     files_found = FindFiles("L:\\HandBrake Movies", MOVIES)
-    #print(*files_found, sep='\n')
+    print(files_found.__len__(), sep='\n')
     with open(CSV_FILE, 'w') as file_obj:
         writer = csv.writer(file_obj, delimiter='\t', quotechar='"',
                             quoting=csv.QUOTE_MINIMAL)
         for file in files_found:
             writer.writerow((file, file_hash_hex(file, hashlib.md5)))
+    print(
+        f'Time elpased (hh:mm:ss.ms) {datetime.now()-startTime}  for  {file_path}')
 
 
 if __name__ == "__main__":
@@ -75,3 +75,6 @@ for dir_path, _, files in os.walk("L:\\Optimus", topdown=False):
     print([os.path.join(dir_path, file)
            for path in dir_path for file in files if file.lower().endswith("exe")])
 """
+files_found = ["0"]
+
+print(files_found.__len__(), sep='\n')
