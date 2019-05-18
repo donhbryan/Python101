@@ -12,7 +12,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(443, 422)
+        MainWindow.resize(443, 709)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -142,6 +142,9 @@ class Ui_MainWindow(object):
         self.label_1.setFont(font)
         self.label_1.setObjectName("label_1")
         self.verticalLayout.addWidget(self.label_1)
+        self.picturelabel = QtWidgets.QLabel(self.centralwidget)
+        self.picturelabel.setGeometry(QtCore.QRect(20, 330, 311, 261))
+        self.picturelabel.setObjectName("picturelabel")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 443, 21))
@@ -176,6 +179,7 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", "Horsepower"))
         self.label_3.setText(_translate("MainWindow", "Fuel Type"))
         self.label_1.setText(_translate("MainWindow", "Driven Wheels"))
+        self.picturelabel.setText(_translate("MainWindow", "picture"))
 
 
 if __name__ == "__main__":
