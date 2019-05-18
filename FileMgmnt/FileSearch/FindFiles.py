@@ -57,7 +57,7 @@ def main():
         for file in files_found:
             writer.writerow((file, file_hash_hex(file, hashlib.md5)))
     print(
-        f'Time elpased (hh:mm:ss.ms) {datetime.now()-startTime}  for  {file_path}')
+        f'Time elpased (hh:mm:ss.ms) {datetime.now()-startTime}  for  {files_found.__len__()} files')
 
 
 if __name__ == "__main__":
