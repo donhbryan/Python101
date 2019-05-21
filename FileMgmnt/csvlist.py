@@ -1,20 +1,20 @@
 import os
 
-home = os.path.expanduser("~")
-root_dir = os.path.join(home, "TEST\\TF\\tf")
-cmake_path = os.path.join(root_dir, "CMakeLists.txt")
-
+HOME = os.path.expanduser("~")
+ROOT_DIR = os.path.join(HOME, "TEST\\TF\\tf")
+CMAKE_PATH = os.path.join(ROOT_DIR, "CMakeLists.txt")
+CSV_FILE = 'TF.CSV'
 # make target list
 
 
 def make_target_list():
     target_tag = "set(TARGET_NAME"
     target_list = []
-    for dirpath, dirs, files in os.walk(root_dir):
+    for dirpath, _, files in os.walk(ROOT_DIR):
         if "CMakeLists.txt" in files:
-            for f in files:
-                cmake_path = os.path.join(dirpath, f)
-                with open(cmake_path, 'r') as lines:
+            for file in files:
+                CMAKE_PATH = os.path.join(dirpath, file)
+                with open(CMAKE_PATH, 'r') as lines:
                     for line in lines:
                         if target_tag in line:
                             target = line[line.find(
@@ -25,11 +25,11 @@ def make_target_list():
 # writing csv
 
 
-def write_csv(t):
+def write_csv(csv_line):
     import csv
-    with open('tf.csv', 'w') as f:
-        w = csv.writer(f, delimiter=',')
-        w.writerow(t)
+    with open(CSV_FILE, 'w') as file_obj:
+        w = csv.writer(file_obj, delimiter=',')
+        w.writerow(csv_line)
 
 
 if __name__ == '__main__':

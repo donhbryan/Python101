@@ -9,7 +9,7 @@ def print_movie_files(movie_directory, movie_extensions=['VOB', 'dat', 'mp4', 'm
 
     # Get a list of files in movie_directory
     movie_directory_files = os.listdir(movie_directory)
-
+    print_movie_files_counter=0
     # Traverse through all files
     for filename in movie_directory_files:
         filepath = os.path.join(movie_directory, filename)
@@ -24,7 +24,7 @@ def print_movie_files(movie_directory, movie_extensions=['VOB', 'dat', 'mp4', 'm
                     continue
 
                 # We have got a video file! Increment the counter
-                print_movie_files.counter += 1
+                print_movie_files_counter += 1
 
                 # Print it's name
                 print('{0}'.format(filepath))

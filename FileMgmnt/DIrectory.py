@@ -6,8 +6,7 @@ for dirpath, dirnames, filenames in os.walk(path,  topdown=False):
     print(dirpath, dirnames, filenames)
 for file in filenames:
 	if ".mp4" in file:
-		
-	print (file)
+		print (file)
 i += 1
 print(filenames)
 

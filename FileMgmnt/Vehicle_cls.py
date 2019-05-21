@@ -1,14 +1,20 @@
 import unicodedata
 import Vehicle_Ui
 from PyQt5 import QtCore, QtGui, QtWidgets
-import emoji
+import emoji 
 from pprint import pprint
 import sys
+
+# Vehicle_Type = {"car": "🚗", "truck": "🚙", "taxi": "🚕"}
+
+Vehicle_Type = {"car": emoji.emojize(
+    ':automobile:'), "truck":  emoji.emojize(":truck:"), "lorry":  emoji.emojize(":articulated_lorry:"), "bike":  emoji.emojize(":motorcycle:")}
 
 
 class Vehicle:
     FuelType = ('Gas', 'Deisel', 'Electric', 'CNG')
     DriveType = ('FWD', 'RWD', 'AWD')
+
 
     def __init__(self, mfg, name):
         self.mfg = mfg
@@ -30,21 +36,6 @@ class Vehicle:
             self.drive = drive
         else:
             self.drive = None
-
-
-# 🏍🏎🛥🛶🚲🚒🚗
-class Car(Vehicle):
-    Vehicle_Type = {"car": "🚗", "truck": "🚙", "taxi": "🚕"}
-    Vehicle_Type = {"car": emoji.emojize(
-        ':automobile:'), "truck":  emoji.emojize(":truck:"), "lorry":  emoji.emojize(":articulated_lorry:"), "bike":  emoji.emojize(":motorcycle:")}
-
-    def __init__(self, mfg, name, modelyear, doors, bodystyle, vehicletype=Vehicle_Type["car"]):
-        super().__init__(mfg, name)
-        self.modelyear = modelyear
-        self.doors = doors
-        self.bodystyle = bodystyle
-        self.type = vehicletype
-        # pass
 
     def get_name(self):
         if self.name is None:
@@ -105,6 +96,20 @@ class Car(Vehicle):
             return None
         else:
             return self.drive
+
+
+# 🏍🏎🛥🛶🚲🚒🚗
+class Car(Vehicle):
+
+
+
+    def __init__(self, mfg, name, modelyear, doors, bodystyle, vehicletype=Vehicle_Type["car"]):
+        super().__init__(mfg, name)
+        self.modelyear = modelyear
+        self.doors = doors
+        self.bodystyle = bodystyle
+        self.type = vehicletype
+        # pass
 
 
 class VehicleUI(QtWidgets.QMainWindow, Vehicle_Ui.Ui_MainWindow):
