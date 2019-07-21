@@ -2,7 +2,7 @@ import io  # BytesIO
 import os
 
 # from django.core.files import File
-
+import mutagen
 from mutagen._file import File as MutaFile
 from mutagen.mp3 import MP3
 from mutagen.mp4 import MP4, MP4Cover, MP4Tags

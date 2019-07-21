@@ -44,8 +44,8 @@
     <rect>
      <x>10</x>
      <y>855</y>
-     <width>900</width>
-     <height>10</height>
+     <width>771</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -62,7 +62,56 @@
     </rect>
    </property>
   </widget>
+  <widget class="QPushButton" name="browseBtn">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>850</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="accessibleDescription">
+    <string>Select files for processing</string>
+   </property>
+   <property name="text">
+    <string>Browse</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>quitBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>quitBtn</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1057</x>
+     <y>861</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1057</x>
+     <y>861</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browseBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>browseBtn</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>867</x>
+     <y>861</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>867</x>
+     <y>861</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
