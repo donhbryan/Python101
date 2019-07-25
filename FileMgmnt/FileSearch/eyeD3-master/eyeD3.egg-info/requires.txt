@@ -1,0 +1,12 @@
+python-magic
+
+[:python_version < "3.7"]
+dataclasses
+
+[art-plugin]
+pylast
+requests
+pillow
+
+[display-plugin]
+grako
