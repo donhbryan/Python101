@@ -1,0 +1,3 @@
+pillow==5.4.1
+pylast
+requests==2.21.0

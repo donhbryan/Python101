@@ -1,0 +1,13 @@
+Sphinx==1.8.3
+check-manifest==0.37
+flake8==3.6.0
+hg+https://nicfit@bitbucket.org/nicfit/sphinxcontrib-bitbucket
+ipdb==0.11
+nicfit.py[cookiecutter]==0.8.3
+pss==1.42
+pyaml==18.11.0
+sphinx-issues==1.2.0
+sphinx_rtd_theme==0.4.2
+tox==3.6.0
+twine==1.12.1
+wheel==0.32.3
