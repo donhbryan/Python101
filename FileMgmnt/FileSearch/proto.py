@@ -108,12 +108,12 @@ logging.basicConfig(
     format="%(asctime)-15s [%(levelname)s] %(funcName)s: %(message)s",
     level=logging.INFO)
 #
-""" 
-# foo()
-# dir_list = ["m:\\"]  # "l:\\", "d:\\", "c:\\",
-# find_large_files(dir_list)
+""" """
+foo()
+dir_list = ["m:\\"]  # "l:\\", "d:\\", "c:\\",
+find_large_files(dir_list)
 
-# buff1 = (read_file("c:\\temp\\logger.txt"))
-# buff2 = (read_file("c:\\temp\\logger2.txt"))
-# buff3 = (read_file("c:\\temp\\logger3.txt"))
-"""
+buff1 = (read_file("c:\\temp\\logger.txt"))
+buff2 = (read_file("c:\\temp\\logger2.txt"))
+buff3 = (read_file("c:\\temp\\logger3.txt"))
+
